@@ -1,28 +1,16 @@
 <template>
   <div class="row">
     <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-outline-dark active">
-        <input
-          id="option1"
-          type="radio"
-          name="options"
-          autocomplete="off"
-          checked
-        />
-        List
-      </label>
-      <label class="btn btn-outline-dark">
-        <input id="option2" type="radio" name="options" autocomplete="off" />
-        New
-      </label>
-      <label class="btn btn-outline-dark">
-        <input id="option3" type="radio" name="options" autocomplete="off" />
-        Search
-      </label>
-      <label class="btn btn-outline-dark">
-        <input id="option4" type="radio" name="options" autocomplete="off" />
-        Edit
-      </label>
+      <button
+        v-for="(Page, index) in pages"
+        :key="Page"
+        class="btn btn-outline-dark btn-group-toggle"
+        :class="{ active: currentPage === index + 1 }"
+        data-toggle="buttons"
+        @click="changePage(index + 1)"
+      >
+        {{ Page }}
+      </button>
     </div>
   </div>
 </template>
@@ -30,6 +18,22 @@
 <script>
 export default {
   name: 'AppMenu',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['page'],
+  data() {
+    return {
+      currentPage: this.page,
+      pages: ['List', 'Search', 'New', 'Edit'],
+    }
+  },
+  methods: {
+    changePage(page) {
+      // eslint-disable-next-line vue/no-mutating-props
+      this.currentPage = page
+      // eslint-disable-next-line no-console
+      this.$emit('change-page', page)
+    },
+  },
 }
 </script>
 

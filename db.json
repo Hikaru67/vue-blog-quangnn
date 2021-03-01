@@ -1,15 +1,18 @@
 {
-  "blogs": [{
-    "title": "Phà Vàm Cống dừng hoạt động từ ngày 30/6",
-    "des": "Hơn một tháng sau khi cầu dây văng thứ hai bắc qua sông Hậu thông xe, phà Vàm Cống kết thúc nhiệm vụ 100 năm.",
-    "detail": "Ngày 27/6, ông Nguyễn Phúc Nguyên - Trưởng bến phà Vàm Cống (An Giang - Đồng Tháp) cho biết, đơn vị đã nhận được quyết định của Tổng cục Đường bộ về việc dừng hoạt động bến phà này vào 9h ngày 30/6. ổng cục Đường bộ yêu cầu thông báo rộng rãi về thời gian kết thúc nhiệm vụ của bến phà, tổ chức phân luồng để người tham gia giao thông biết. Cục Quản lý Đường bộ IV được phân công làm việc với Tổng công ty Đầu tư phát triển và Quản lý dự án hạ tầng giao thông Cửu Long để bảo đảm giao thông an toàn, thông suốt trên cầu Vàm Cống và các tuyến kết nối...Bến phà Vàm Cống đã hoạt động khoảng 100 năm, có 170 nhân sự, 10 chiếc phà. Khi cầu thông xe, đơn vị đã chấm dứt hợp đồng lao động thời vụ với 50 người. 50 nhân viên cùng 5 chiếc phà được chuyển đến phục vụ ở các bến khác tại miền Tây.Hơn tháng qua, mỗi ngày bến phà Vàm Cống có 2-3 chiếc chở 4.000 - 5.000 xe máy và khoảng 100 ôtô. \"Sắp tới, 70 người cùng 5 chiếc phà còn lại tiếp tục được điều đến các bến trong khu vực\", ông Nguyên nói.",
-    "category": 0,
-    "public": false,
-    "data_pubblic": "2019-06-28",
-    "position": [1],
-    "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/pha-Vam-Cong-7303-1561651034.jpg",
-    "id": 1
-  },
+  "blogs": [
+    {
+      "title": "Phà Vàm Cống dừng hoạt động từ ngày 30/6",
+      "des": "Hơn một tháng sau khi cầu dây văng thứ hai bắc qua sông Hậu thông xe, phà Vàm Cống kết thúc nhiệm vụ 100 năm.",
+      "detail": "Ngày 27/6, ông Nguyễn Phúc Nguyên - Trưởng bến phà Vàm Cống (An Giang - Đồng Tháp) cho biết, đơn vị đã nhận được quyết định của Tổng cục Đường bộ về việc dừng hoạt động bến phà này vào 9h ngày 30/6. ổng cục Đường bộ yêu cầu thông báo rộng rãi về thời gian kết thúc nhiệm vụ của bến phà, tổ chức phân luồng để người tham gia giao thông biết. Cục Quản lý Đường bộ IV được phân công làm việc với Tổng công ty Đầu tư phát triển và Quản lý dự án hạ tầng giao thông Cửu Long để bảo đảm giao thông an toàn, thông suốt trên cầu Vàm Cống và các tuyến kết nối...Bến phà Vàm Cống đã hoạt động khoảng 100 năm, có 170 nhân sự, 10 chiếc phà. Khi cầu thông xe, đơn vị đã chấm dứt hợp đồng lao động thời vụ với 50 người. 50 nhân viên cùng 5 chiếc phà được chuyển đến phục vụ ở các bến khác tại miền Tây.Hơn tháng qua, mỗi ngày bến phà Vàm Cống có 2-3 chiếc chở 4.000 - 5.000 xe máy và khoảng 100 ôtô. \"Sắp tới, 70 người cùng 5 chiếc phà còn lại tiếp tục được điều đến các bến trong khu vực\", ông Nguyên nói.",
+      "category": 0,
+      "public": false,
+      "data_pubblic": "2019-06-28",
+      "position": [
+        1
+      ],
+      "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/pha-Vam-Cong-7303-1561651034.jpg",
+      "id": 1
+    },
     {
       "id": 2,
       "title": "Hai dự án cao tốc Bắc Nam sẽ khởi công vào tháng 8",
@@ -18,7 +21,9 @@
       "category": 0,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/26/anh-1-1533376007-680x0-8743-15-6639-9178-1561555738.jpg"
     },
     {
@@ -28,7 +33,9 @@
       "category": 1,
       "public": false,
       "data_pubblic": "2019-06-28",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/28/map1-2203-1561686007.jpg",
       "id": 3
     },
@@ -39,7 +46,9 @@
       "category": 1,
       "public": true,
       "data_pubblic": "2019-06-12",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/25/president-trump-02-gty-jef-190-3586-8058-1561478000.jpg",
       "id": 4
     },
@@ -50,7 +59,9 @@
       "category": 2,
       "public": true,
       "data_pubblic": "2019-06-04",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-kinhdoanh.vnecdn.net/2019/06/28/bit-4750-1561686878.jpg",
       "id": 5
     },
@@ -61,7 +72,9 @@
       "category": 2,
       "public": false,
       "data_pubblic": "2019-06-04",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-kinhdoanh.vnecdn.net/2019/06/25/gold-2091-1561422558.jpg",
       "id": 6
     },
@@ -72,7 +85,9 @@
       "category": 3,
       "public": true,
       "data_pubblic": "2019-06-20",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-giaitri.vnecdn.net/2019/06/28/lee-byung-hun-8385-1561686128.jpg",
       "id": 7
     },
@@ -83,7 +98,9 @@
       "category": 3,
       "public": true,
       "data_pubblic": "2019-06-19",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-giaitri.vnecdn.net/2019/06/24/linh-nga-2_1561341904_680x0.jpg",
       "id": 8
     },
@@ -94,7 +111,9 @@
       "category": 4,
       "public": true,
       "data_pubblic": "2019-06-19",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-thethao.vnecdn.net/2019/06/27/mes4-2318-1561614140.jpg",
       "id": 9
     },
@@ -105,7 +124,9 @@
       "category": 4,
       "public": true,
       "data_pubblic": "2019-06-12",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-thethao.vnecdn.net/2019/06/27/Untitled-3-3749-1561630955.jpg",
       "id": 10
     },
@@ -117,7 +138,9 @@
       "category": 5,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/DuongVanThang-4683-1561607688.jpg"
     },
     {
@@ -128,7 +151,9 @@
       "category": 5,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/26/1-9528-1561551878.jpg"
     },
     {
@@ -139,7 +164,9 @@
       "category": 6,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/pho-giam-doc-nguyen-van-hieu-7030-1561622423.jpg"
     },
     {
@@ -150,7 +177,9 @@
       "category": 6,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/26/10-1561527966_680x0.jpg"
     },
     {
@@ -161,7 +190,9 @@
       "category": 7,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-suckhoe.vnecdn.net/2019/06/25/phpthumb-generated-thumbnail-j-5687-7499-1561448855.png"
     },
     {
@@ -172,7 +203,9 @@
       "category": 7,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-suckhoe.vnecdn.net/2019/06/28/PET-CT-5624-1561678794.jpg"
     },
     {
@@ -183,7 +216,9 @@
       "category": 8,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-giadinh.vnecdn.net/2019/06/27/henho0-9691-1561628012.jpg"
     },
     {
@@ -194,7 +229,9 @@
       "category": 8,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-giadinh.vnecdn.net/2019/06/26/dieu-hoa-3-5058-1561533971.jpg"
     },
     {
@@ -205,7 +242,9 @@
       "category": 9,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-dulich.vnecdn.net/2019/06/07/5-1559870330_680x0.jpg"
     },
     {
@@ -216,7 +255,9 @@
       "category": 9,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-dulich.vnecdn.net/2019/06/26/2-1561535424_680x0.jpg"
     },
     {
@@ -227,7 +268,9 @@
       "category": 10,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/28/san-ho-bien-8281-1561684472.jpg"
     },
     {
@@ -238,7 +281,9 @@
       "category": 10,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-dulich.vnecdn.net/2019/06/26/0_680x0.jpg"
     },
     {
@@ -249,7 +294,9 @@
       "category": 11,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-sohoa.vnecdn.net/2019/06/27/screen-shot-2019-06-27-at-7-08-4851-4490-1561594260.png"
     },
     {
@@ -260,7 +307,9 @@
       "category": 11,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-sohoa.vnecdn.net/2019/06/27/Screen-Shot-2019-06-27-at-2-02-6330-5884-1561619177.png"
     },
     {
@@ -271,7 +320,9 @@
       "category": 12,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/1696917373-w500-2666-1561631597.png"
     },
     {
@@ -282,7 +333,9 @@
       "category": 12,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/27/Seatbelts-and-Child-Restraints-3157-1561610734.jpg"
     },
     {
@@ -293,7 +346,9 @@
       "category": 12,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/26/Xe-3-3795-1561526551.jpg"
     },
     {
@@ -304,7 +359,9 @@
       "category": 5,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [1],
+      "position": [
+        1
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/26/Toyota-RAV4-VNEXPRESS-1561541307_680x0.jpg"
     },
     {
@@ -315,7 +372,9 @@
       "category": 1,
       "public": true,
       "data_pubblic": "2019-06-28",
-      "position": [2],
+      "position": [
+        2
+      ],
       "thumbs": "https://i-vnexpress.vnecdn.net/2019/06/28/Florence-Parly-JPG-7292-1561681171.jpg"
     },
     {
@@ -346,6 +405,50 @@
       ],
       "thumbs": "amess.jpg",
       "id": 31
+    },
+    {
+      "title": "",
+      "des": "",
+      "detail": "",
+      "category": "",
+      "status": "",
+      "data_pubblic": "",
+      "position": [],
+      "thumbs": "",
+      "id": 32
+    },
+    {
+      "title": "",
+      "des": "",
+      "detail": "",
+      "category": "",
+      "status": "",
+      "data_pubblic": "",
+      "position": [],
+      "thumbs": "",
+      "id": 33
+    },
+    {
+      "title": "",
+      "des": "",
+      "detail": "",
+      "category": "",
+      "status": "",
+      "data_pubblic": "",
+      "position": [],
+      "thumbs": "",
+      "id": 34
+    },
+    {
+      "title": "",
+      "des": "",
+      "detail": "",
+      "category": "",
+      "status": "",
+      "data_pubblic": "",
+      "position": [],
+      "thumbs": "",
+      "id": 35
     }
   ]
 }

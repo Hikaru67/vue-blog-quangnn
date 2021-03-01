@@ -1,7 +1,12 @@
 <template>
   <div>
-    <BlogList v-if="typePage === 'list'"></BlogList>
-    <BlogCreateEdit v-if="typePage === 'create&edit'"></BlogCreateEdit>
+    <component
+      :is="currentPage"
+      :page="page"
+      :blog-id="blogId"
+      @edit-blog="getBlogId"
+    ></component>
+    {{ blogId }}
   </div>
 </template>
 
@@ -13,10 +18,25 @@ import BlogCreateEdit from '~/components/BlogCreateEdit'
 
 export default {
   name: 'AppPage',
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['page'],
   data() {
     return {
-      typePage: 'list',
+      blogId: '',
     }
+  },
+  computed: {
+    currentPage() {
+      return this.page === 1 || this.page === 2 ? 'BlogList' : 'BlogCreateEdit'
+    },
+  },
+  methods: {
+    getBlogId(blogId) {
+      this.blogId = blogId
+      // eslint-disable-next-line vue/no-mutating-props
+      this.page = 4
+      this.$emit('change-page', 4)
+    },
   },
 }
 </script>
