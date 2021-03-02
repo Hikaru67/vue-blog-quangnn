@@ -3,7 +3,6 @@
     <h3>Edit Blog</h3>
     <div class="card-body" style="border: white">
       <form
-        action=""
         enctype="multipart/form-data"
         novalidate="false"
         @submit="checkForm"
@@ -143,7 +142,7 @@ export default {
   mounted() {
     // eslint-disable-next-line no-undef
     axios
-      .get('http://localhost:3001/blogs/' + this.$route.params.id)
+      .get('http://127.0.0.1:8000/blogs/' + this.$route.params.id)
       .then((response) => (this.blog = response.data))
   },
   methods: {
@@ -197,7 +196,7 @@ export default {
       if (this.validate())
         axios
           .put(
-            'http://localhost:3001/blogs/' + this.$route.params.id,
+            'http://127.0.0.1:8000/blogs/' + this.$route.params.id,
             this.blog
           )
           .then(function (response) {

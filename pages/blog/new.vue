@@ -4,7 +4,7 @@
     <BlogCreateEdit></BlogCreateEdit>
     <div class="card-body" style="border: white">
       <form
-        action=""
+        method="post"
         enctype="multipart/form-data"
         novalidate="true"
         @submit="checkForm"
@@ -102,7 +102,7 @@
             name="datePublic"
           />
         </label>
-
+        {{ blog }}
         <br />
         <div style="text-align: center">
           <button type="submit" class="btn btn-success" @click="addBlog()">
@@ -137,11 +137,11 @@ export default {
         title: '',
         des: '',
         detail: '',
+        thumbs: '',
         category: '',
+        position: [],
         public: '',
         data_pubblic: '',
-        position: [],
-        thumbs: '',
       },
     }
   },
@@ -168,14 +168,15 @@ export default {
       return !this.errors.length
     },
     addBlog() {
+      console.log(this.blog)
       if (this.validate())
         axios
-          .post('http://localhost:3001/blogs', this.blog)
+          .post('http://127.0.0.1:8000/blogs', this.blog)
           .then(function (response) {
             // eslint-disable-next-line no-console
             console.log(response)
             alert(response.statusText)
-            window.location.href = 'blog/list'
+            window.location.href = '/blog/list'
           })
           .catch(function (error) {
             // eslint-disable-next-line no-console

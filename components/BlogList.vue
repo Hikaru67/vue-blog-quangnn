@@ -46,7 +46,7 @@ export default {
   methods: {
     sendListBlogs(title) {
       axios
-        .get('http://localhost:3001/blogs')
+        .get('http://127.0.0.1:8000/blogs')
         .then((response) =>
           this.$emit('list-blog', this.search(response.data, title))
         )
@@ -59,7 +59,7 @@ export default {
     },
     deleteBlog(blogId) {
       axios
-        .delete('http://localhost:3001/blogs/' + blogId)
+        .delete('http://127.0.0.1:8000/blogs' + blogId)
         .then(function (response) {
           // eslint-disable-next-line no-console
           console.log(response)
