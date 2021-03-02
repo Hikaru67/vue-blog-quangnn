@@ -6,7 +6,7 @@
       :blog-id="blogId"
       @edit-blog="getBlogId"
     ></component>
-    {{ blogId }}
+    {{ page }}
   </div>
 </template>
 
@@ -29,6 +29,14 @@ export default {
     currentPage() {
       return this.page === 1 || this.page === 2 ? 'BlogList' : 'BlogCreateEdit'
     },
+  },
+  beforeCreate() {
+    switch (this.$route.fullPath) {
+      case 'blog/List':
+        // eslint-disable-next-line vue/no-mutating-props
+        this.page = 1
+        break
+    }
   },
   methods: {
     getBlogId(blogId) {

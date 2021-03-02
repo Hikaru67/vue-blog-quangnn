@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h3>Edit Blog</h3>
+    <h3>New Blog</h3>
+    <BlogCreateEdit></BlogCreateEdit>
     <div class="card-body" style="border: white">
       <form
         action=""
@@ -80,7 +81,6 @@
           type="radio"
           name="public"
           :value="true"
-          :checked="blog.public === true"
         />
         <label for="public1">Yes</label><br />
 
@@ -90,7 +90,6 @@
           type="radio"
           name="public"
           :value="false"
-          :checked="blog.public === false"
         />
         <label for="public2">No</label><br />
 
@@ -106,7 +105,7 @@
 
         <br />
         <div style="text-align: center">
-          <button type="submit" class="btn btn-success" @click="updateBlog()">
+          <button type="submit" class="btn btn-success" @click="addBlog()">
             Submit
           </button>
           <button type="reset" class="btn btn-primary">Clear</button>
@@ -120,9 +119,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'Edit',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['blogId'],
+  name: 'Create',
   data() {
     return {
       errors: [],
@@ -136,16 +133,55 @@ export default {
         'Y tế',
       ],
       positions: ['Việt Nam', 'Châu Á', 'Châu Âu', 'Châu Mỹ'],
-      blog: '',
+      blog: {
+        title: '',
+        des: '',
+        detail: '',
+        category: '',
+        public: '',
+        data_pubblic: '',
+        position: [],
+        thumbs: '',
+      },
     }
   },
-  mounted() {
-    // eslint-disable-next-line no-undef
-    axios
-      .get('http://localhost:3001/blogs/' + this.blogId)
-      .then((response) => (this.blog = response.data))
-  },
   methods: {
+    validate() {
+      this.errors = []
+
+      if (!this.blog.title) {
+        this.errors.push('Title required.')
+      }
+      if (!this.blog.category) {
+        this.errors.push('Category r  equired.')
+      }
+      if (!this.blog.public) {
+        this.errors.push('Status required.')
+      }
+      if (!this.blog.data_pubblic) {
+        this.errors.push('Date public required.')
+      }
+      if (!this.blog.position) {
+        this.errors.push('Position required.')
+      }
+
+      return !this.errors.length
+    },
+    addBlog() {
+      if (this.validate())
+        axios
+          .post('http://localhost:3001/blogs', this.blog)
+          .then(function (response) {
+            // eslint-disable-next-line no-console
+            console.log(response)
+            alert(response.statusText)
+            window.location.href = 'blog/list'
+          })
+          .catch(function (error) {
+            // eslint-disable-next-line no-console
+            console.log(error)
+          })
+    },
     checkForm(e) {
       this.errors = []
 
@@ -155,7 +191,7 @@ export default {
       if (!this.blog.category) {
         this.errors.push('Category required.')
       }
-      if (!this.blog.status) {
+      if (!this.blog.public) {
         this.errors.push('Status required.')
       }
       if (!this.blog.data_pubblic) {
@@ -170,18 +206,6 @@ export default {
       }
 
       e.preventDefault()
-    },
-    updateBlog() {
-      axios
-        .put('http://localhost:3001/blogs/' + this.blogId, this.blog)
-        .then(function (response) {
-          // eslint-disable-next-line no-console
-          console.log(response)
-        })
-        .catch(function (error) {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
     },
   },
 }

@@ -1,12 +1,15 @@
 <template>
-  <div class="container">
-    <AppHeader></AppHeader>
-    <div class="row">
-      <div class="col-lg-3">
-        <AppMenu :current-page="page" @change-page="selectedPage"></AppMenu>
-      </div>
-      <div class="col-lg-9">
-        <AppPage :page="page" @change-page="selectedPage"></AppPage>
+  <div>
+    <div class="container">
+      <AppHeader></AppHeader>
+      <div class="row">
+        <div class="col-lg-3">
+          <AppMenu :current-page="page" @change-page="selectedPage"></AppMenu>
+        </div>
+        <div class="col-lg-9">
+          <!--          <AppPage :page="page" @change-page="selectedPage"></AppPage>-->
+          <Nuxt></Nuxt>
+        </div>
       </div>
     </div>
   </div>
@@ -22,13 +25,15 @@ export default {
   name: 'Blog',
   data() {
     return {
-      page: 1,
+      pages: ['List', 'Search', 'New', 'Edit'],
+      page: 2,
     }
   },
   methods: {
     selectedPage(page) {
       this.page = page
     },
+    getPage() {},
   },
 }
 </script>

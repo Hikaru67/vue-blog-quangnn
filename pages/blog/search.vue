@@ -1,5 +1,25 @@
 <template>
   <div>
+    <BlogList :title="title" @list-blog="getListBlog"></BlogList>
+    <h3><p>Search Blog</p></h3>
+    <label class=""
+      >Tiêu đề
+      <input
+        id="searchTitle"
+        v-model="title"
+        type="text"
+        class="form-control"
+        placeholder="Title"
+      />
+    </label>
+    <button
+      class="btn btn-outline-success mb-2"
+      type="submit"
+      @click="search(listBlogs)"
+    >
+      Search
+    </button>
+    <br />
     <h3>List Blog</h3>
     <table class="table">
       <thead class="thead-light">
@@ -39,11 +59,30 @@
 </template>
 
 <script>
+import axios from 'axios'
+// eslint-disable-next-line no-unused-vars
+import BlogList from '~/components/BlogList'
+
 export default {
-  name: 'List',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['listBlogs'],
+  name: 'Search',
+  data() {
+    return {
+      title: '',
+      itemFilted: this.listBlogs,
+      listBlogs: {},
+    }
+  },
   methods: {
+    getListBlog(listBlogs) {
+      this.listBlogs = listBlogs
+      this.itemFilted = listBlogs
+    },
+    search(blogs) {
+      // eslint-disable-next-line vue/no-mutating-props
+      this.listBlogs = this.title
+        ? this.itemFilted.filter((blog) => blog.title.includes(this.title))
+        : this.itemFilted
+    },
     getPosition(listPosition) {
       let positions = ''
       listPosition.forEach(function (position) {
@@ -88,10 +127,22 @@ export default {
       return status ? 'Yes' : 'No'
     },
     editBlog(blogId) {
-      this.$emit('edit-blog', blogId)
+      // this.$emit('edit-blog', blogId)
+      window.location.href = '/blog/edit/' + blogId
     },
     deleteBlog(blogId) {
-      this.$emit('delete-blog', blogId)
+      axios
+        .delete('http://localhost:3001/blogs/' + blogId)
+        .then(function (response) {
+          // eslint-disable-next-line no-console
+          console.log(response)
+        })
+        .catch(function (error) {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.$emit('delete-blog', blogId)
+      window.location.href = '/blog/list'
     },
   },
 }

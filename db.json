@@ -408,47 +408,44 @@
     },
     {
       "title": "",
-      "des": "",
-      "detail": "",
-      "category": "",
-      "status": "",
-      "data_pubblic": "",
-      "position": [],
+      "des": "das",
+      "detail": "asd",
+      "category": 1,
+      "public": true,
+      "data_pubblic": "2312-12-31",
+      "position": [
+        1,
+        2
+      ],
       "thumbs": "",
       "id": 32
     },
     {
-      "title": "",
-      "des": "",
-      "detail": "",
-      "category": "",
-      "status": "",
-      "data_pubblic": "",
-      "position": [],
+      "title": "asd",
+      "des": "das",
+      "detail": "dsa",
+      "category": 2,
+      "public": true,
+      "data_pubblic": "2312-12-31",
+      "position": [
+        1
+      ],
       "thumbs": "",
       "id": 33
     },
     {
-      "title": "",
-      "des": "",
-      "detail": "",
-      "category": "",
-      "status": "",
-      "data_pubblic": "",
-      "position": [],
+      "title": "asd",
+      "des": "asd",
+      "detail": "asd",
+      "category": 1,
+      "public": true,
+      "data_pubblic": "0212-12-31",
+      "position": [
+        1,
+        2
+      ],
       "thumbs": "",
       "id": 34
-    },
-    {
-      "title": "",
-      "des": "",
-      "detail": "",
-      "category": "",
-      "status": "",
-      "data_pubblic": "",
-      "position": [],
-      "thumbs": "",
-      "id": 35
     }
   ]
 }

@@ -1,17 +1,9 @@
 <template>
-  <div>
-    <Create v-if="createPage"></Create>
-    <Edit v-else :blog-id="blogId"></Edit>
-  </div>
+  <div></div>
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
 import axios from 'axios'
-// eslint-disable-next-line no-unused-vars
-import Create from '~/components/Create'
-// eslint-disable-next-line no-unused-vars
-import Edit from '~/components/Edit'
 
 export default {
   name: 'BlogCreateEdit',

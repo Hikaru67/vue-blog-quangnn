@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="searchPage">
+    <!--    <div v-if="searchPage">
       <Search
         :list-blogs="listBlogs"
         @edit-blog="editBlog"
@@ -13,17 +13,12 @@
       @edit-blog="editBlog"
       @delete-blog="deleteBlog"
     ></List>
-    <br />
+    <br />-->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
-// eslint-disable-next-line no-unused-vars
-import List from '~/components/List'
-// eslint-disable-next-line no-unused-vars
-import Search from '~/components/Search'
 
 export default {
   name: 'BlogList',
@@ -34,10 +29,10 @@ export default {
     },
   },
   // eslint-disable-next-line vue/require-prop-types
-  props: ['page'],
+  props: ['title'],
   data() {
     return {
-      listBlogs: '',
+      listBlogs: [],
     }
   },
   computed: {
@@ -46,12 +41,19 @@ export default {
     },
   },
   mounted() {
-    // eslint-disable-next-line no-undef
-    axios
-      .get('http://localhost:3001/blogs')
-      .then((response) => (this.listBlogs = response.data))
+    this.sendListBlogs(this.title)
   },
   methods: {
+    sendListBlogs(title) {
+      axios
+        .get('http://localhost:3001/blogs')
+        .then((response) =>
+          this.$emit('list-blog', this.search(response.data, title))
+        )
+    },
+    search(blogs, title) {
+      return title ? blogs.filter((blog) => blog.title.includes(title)) : blogs
+    },
     editBlog(blogId) {
       this.$emit('edit-blog', blogId)
     },
