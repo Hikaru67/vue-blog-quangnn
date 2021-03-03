@@ -47,11 +47,6 @@ export default {
   name: 'BlogList',
   // eslint-disable-next-line vue/require-prop-types
   props: ['listBlogs'],
-  data() {
-    return {
-      // listBlogs: [],
-    }
-  },
   computed: {
     categories() {
       return this.$store.state.blog.CATEGORIES
@@ -73,7 +68,6 @@ export default {
 
     // editBlog will redirect to editBLog Page
     editBlog(blogId) {
-      // this.$emit('edit-blog', blogId)
       window.location.href = '/blog/edit/' + blogId
     },
 
@@ -81,13 +75,11 @@ export default {
     deleteBlog(blogId) {
       axios
         .delete(this.$store.state.blog.API_BLOG_URL + blogId)
-        .then(function (response) {
-          // eslint-disable-next-line no-console
-          console.log(response)
+        .then(function () {
+          alert('Delete blog success')
         })
         .catch(function (error) {
-          // eslint-disable-next-line no-console
-          console.log(error)
+          alert(error)
         })
       // this.$emit('delete-blog', blogId)
       window.location.href = '/blog/list'

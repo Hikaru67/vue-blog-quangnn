@@ -1,12 +1,7 @@
 <template>
   <div>
     <div class="card-body" style="border: white">
-      <form
-        method="post"
-        enctype="multipart/form-data"
-        novalidate="false"
-        @submit="checkForm"
-      >
+      <form enctype="multipart/form-data" method="post" @submit="checkForm">
         <div v-if="errors.length" style="color: red">
           <b>Please correct the following error(s):</b>
           <ul>
@@ -20,11 +15,18 @@
             v-model="blog.title"
             type="text"
             class="form-control"
+            name="title"
           />
         </div>
         <div class="form-group">
           <label for="des">Mô tả ngắn</label>
-          <input id="des" v-model="blog.des" type="text" class="form-control" />
+          <input
+            id="des"
+            v-model="blog.des"
+            name="des"
+            type="text"
+            class="form-control"
+          />
         </div>
         <div class="form-group">
           <label for="detail">Chi tiết</label>
@@ -34,17 +36,18 @@
             type="text"
             class="form-control"
             style="height: 200px"
+            name="detail"
           >
           </textarea>
         </div>
         <div class="form-group">
           <p>Hình ảnh</p>
-          <input id="image" type="file" />
+          <input id="thumbs" name="thumbs" type="file" />
         </div>
         <div class="form-group">
           <p>Loại</p>
           <label for="category"></label>
-          <select id="category" v-model="blog.category" name="type-blog">
+          <select id="category" v-model="blog.category" name="category">
             <option
               v-for="(Category, index) in categories"
               :key="Category"
@@ -99,7 +102,7 @@
             id="datePublic"
             v-model="blog.data_pubblic"
             type="date"
-            name="datePublic"
+            name="data_pubblic"
           />
         </label>
 
@@ -170,13 +173,14 @@ export default {
       if (this.validate())
         axios
           .post(this.$store.state.blog.API_BLOG_URL, this.blog)
-          .then(function (response) {
+          .then(function () {
             alert('Add blog success')
             window.location.href = '/blog/list'
           })
           .catch(function (error) {
             alert(error)
           })
+      window.scrollTo(0, 0)
     },
 
     // updateBlog will update blog was selected
@@ -187,17 +191,18 @@ export default {
             this.$store.state.blog.API_BLOG_URL + this.$route.params.id,
             this.blog
           )
-          .then(function (response) {
+          .then(function () {
             alert('Update blog success')
             window.location.href = '/blog/list'
           })
           .catch(function (error) {
             alert(error)
           })
+      window.scrollTo(0, 0)
     },
 
     // validate will check data validity
-    validate(e) {
+    validate() {
       this.errors = []
 
       if (!this.blog.title) {
@@ -212,37 +217,15 @@ export default {
       if (!this.blog.data_pubblic) {
         this.errors.push('Date public required.')
       }
-      if (!this.blog.position) {
+      if (!this.blog.position[0]) {
         this.errors.push('Position required.')
       }
 
       return !this.errors.length
     },
 
-    // checkFrom will prevent from submit if have one data which is invalid
+    // checkFrom will prevent form from being submitted
     checkForm(e) {
-      this.errors = []
-
-      if (!this.blog.title) {
-        this.errors.push('Title required.')
-      }
-      if (!this.blog.category) {
-        this.errors.push('Category required.')
-      }
-      if (!this.blog.public) {
-        this.errors.push('Status required.')
-      }
-      if (!this.blog.data_pubblic) {
-        this.errors.push('Date public required.')
-      }
-      if (!this.blog.position) {
-        this.errors.push('Position required.')
-      }
-
-      if (!this.errors.length) {
-        return true
-      }
-
       e.preventDefault()
     },
   },
