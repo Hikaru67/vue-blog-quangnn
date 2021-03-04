@@ -147,28 +147,51 @@ export default {
     }
   },
   computed: {
+    /**
+     * `blog` get list categories
+     * @returns {array} list categories
+     */
     blog() {
       if (this.currentBlog) return this.currentBlog
       return this.newBlog
     },
+
+    /**
+     * `categories` get list categories
+     * @returns {array} list categories
+     */
     categories() {
       return this.$store.state.blog.CATEGORIES
     },
+
+    /**
+     * `status` get list status
+     * @returns {array} list status
+     */
     status() {
       return this.$store.state.blog.STATUS
     },
+
+    /**
+     * `status` get list positions
+     * @returns {array} list positions
+     */
     positions() {
       return this.$store.state.blog.POSITIONS
     },
   },
+
   mounted() {
     // eslint-disable-next-line no-undef
     axios
       .get(this.$store.state.blog.API_BLOG_URL)
       .then((response) => (this.listBlogs = response.data))
   },
+
   methods: {
-    // addBlog will add a new blog to database
+    /**
+     * `addBlog` add a new blog to database
+     */
     addBlog() {
       if (this.validate())
         axios
@@ -183,7 +206,9 @@ export default {
       window.scrollTo(0, 0)
     },
 
-    // updateBlog will update blog was selected
+    /**
+     * `updateBlog` update current blog
+     */
     updateBlog() {
       if (this.validate())
         axios
@@ -201,7 +226,10 @@ export default {
       window.scrollTo(0, 0)
     },
 
-    // validate will check data validity
+    /**
+     * `validate` check data validity
+     * @returns {boolean} the valid of errors.length
+     */
     validate() {
       this.errors = []
 
@@ -224,7 +252,9 @@ export default {
       return !this.errors.length
     },
 
-    // checkFrom will prevent form from being submitted
+    /**
+     * `checkFrom` prevent form from being submitted
+     */
     checkForm(e) {
       e.preventDefault()
     },

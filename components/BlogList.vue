@@ -48,30 +48,46 @@ export default {
   // eslint-disable-next-line vue/require-prop-types
   props: ['listBlogs'],
   computed: {
+    /**
+     * `categories` get list categories
+     * @returns {array} list categories
+     */
     categories() {
       return this.$store.state.blog.CATEGORIES
     },
+
+    /**
+     * `status` get list status
+     * @returns {array} list status
+     */
     status() {
       return this.$store.state.blog.STATUS
     },
   },
-  mounted() {
-    // this.sendListBlogs(this.title)
-  },
   methods: {
-    // getPosition will convert position property type number to string
+    /**
+     * `getPosition` get position name
+     * @param {array} listPosition - list positions
+     * @returns {string} position name
+     */
     getPosition(listPosition) {
       return listPosition
         .map((position) => this.$store.state.blog.POSITIONS[position - 1])
         .toString()
     },
 
-    // editBlog will redirect to editBLog Page
+    /**
+     * `editBlog` redirect to editBLog Page
+     * @param {string} blogId - id blog
+     */
     editBlog(blogId) {
       window.location.href = '/blog/edit/' + blogId
     },
 
-    // deleteBlog will delete current blog and redirect to list blog page
+    /**
+     * `deleteBlog` delete blog by id and redirect to list blog page
+     * @param {string} blogId - id blog
+     */
     deleteBlog(blogId) {
       axios
         .delete(this.$store.state.blog.API_BLOG_URL + blogId)
@@ -81,7 +97,6 @@ export default {
         .catch(function (error) {
           alert(error)
         })
-      // this.$emit('delete-blog', blogId)
       window.location.href = '/blog/list'
     },
   },
